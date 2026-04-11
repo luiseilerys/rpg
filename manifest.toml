@@ -1,0 +1,13 @@
+name = "The First Dungeon"
+source_file = "index.html"
+description = "🎮 RPG de acción 2D con mundo de píxeles. Explora, lucha contra monstruos y sube de nivel. ¡Juega gratis en Delta Chat!"
+version = "1.1.0"
+min_api = 6
+
+[webxdc]
+width = 800
+height = 600
+
+[[permissions]]
+name = "internet"
+description = "Para cargar recursos del juego"
