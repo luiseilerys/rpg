@@ -1,36 +1,87 @@
-# ⚔️ The First Dungeon ⚔️ 
+# The First Dungeon - Webxdc Edition
 
-The First Dungeon is an RPG game project for Computing Practice Module, University of Plymouth. 
-Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Homepage") for 2D rendering and [VueJS](https://vuejs.org/) for User Interface.
+Un RPG de acción 2D con mundo de píxeles lleno de aventuras, adaptado para ejecutarse como aplicación Webxdc en Delta Chat.
 
-![image](https://github.com/johnl28/rpg/assets/54412955/0432f923-90a8-4480-b0e5-5b43e787d7a4)
+## 🎮 Características
 
+- **RPG de Acción 2D**: Combate en tiempo real con diferentes enemigos
+- **Mundo Abierto**: Explora el mapa empire1 con múltiples áreas
+- **Sistema de Progresión**: Sube hasta el nivel 100
+- **Auto-guardado**: Tu progreso se guarda automáticamente cada 60 segundos
+- **Multiplayer**: Juega con amigos en chats de Delta Chat
 
-## 🎮 Gameplay
-- You will be spawned as an adventurer, which will have to save his world from the goblins. There will be 3 different realms, in order to win you must kill each boss of the realm.
-- Killing and collecting the items will gain you experience for level and power. Just beating the boss is not gonna bring you to the next realm, you must complete the spell puzzle using the stones gathered after killing the boss.
+## 📦 Instalación
 
-## 📐 Code Architecture 
-![](https://i.imgur.com/jFUtd9S.jpg)
+### En Delta Chat
 
-## 📝 License
-#### [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)
+1. Descarga el archivo `.xdc` desde las releases
+2. Envíalo a cualquier chat de Delta Chat
+3. Ábrelo y comienza a jugar
 
-## ♥ Resources & Credits
-- Here are the links for the sprites and assets used for the game.
-  - https://opengameart.org/content/lpc-trees
-  - https://opengameart.org/content/2d-lost-garden-tileset-transition-to-jetrels-wood-tileset
-  - https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
-  - https://sanctumpixel.itch.io/imp-axe-demon-pixel-art-character
-  - https://rvros.itch.io/animated-pixel-hero
-  - https://admurin.itch.io/free-chest-animations
-  - https://luizmelo.itch.io/monsters-creatures-fantasy
-  - https://opengameart.org/content/lpc-terrains
-  - https://opengameart.org/content/lpc-rocks
-  - https://opengameart.org/content/lpc-bricks
+### Desarrollo Local
 
-## Inputs
- ![movement](https://user-images.githubusercontent.com/54412955/166667682-0db98f23-d392-4bc1-897a-3e5c87a2877f.png)
+```bash
+# Clona el repositorio
+git clone <repository-url>
+cd the-first-dungeon-webxdc
 
-## Demo link
-[👉 Click here](https://thefirstdungeon.web.app/) 
+# Abre index.html en tu navegador
+# El polyfill de webxdc.js permite ejecutar el juego sin Delta Chat
+```
+
+## 🛠️ Tecnologías
+
+- **Motor**: PixiJS v6.2.1 (renderizado WebGL 2D)
+- **UI**: jQuery v3.5.1
+- **API**: Webxdc (Delta Chat)
+- **Lenguaje**: JavaScript ES6+
+
+## 🎯 Controles
+
+- **W/A/S/D**: Moverse
+- **Espacio/F**: Atacar
+- **R**: Respawn (al morir)
+- **Escape**: Menú principal
+
+## 📁 Estructura del Proyecto
+
+```
+the-first-dungeon-webxdc/
+├── manifest.toml      # Configuración Webxdc
+├── index.html         # Punto de entrada
+├── webxdc.js          # Polyfill API Webxdc
+├── src/               # Código fuente minificado
+│   ├── constants.min.js
+│   ├── game.min.js
+│   ├── main.min.js
+│   └── ...
+└── assets/            # Recursos del juego
+    ├── actor/         # Sprites de personajes
+    ├── map/           # Texturas y mapas
+    ├── ui/            # Interfaz de usuario
+    └── ...
+```
+
+## 🚀 Empaquetar para Webxdc
+
+Para crear un archivo `.xdc`:
+
+```bash
+# Comprime todos los archivos en un zip
+zip -r the-first-dungeon.xdc \
+  manifest.toml \
+  index.html \
+  webxdc.js \
+  src/ \
+  assets/
+```
+
+## 📝 Licencia
+
+BSD-2-Clause
+
+## 🔗 Enlaces
+
+- [Demo Web](https://thefirstdungeon.web.app)
+- [Documentación Webxdc](https://webxdc.org)
+- [Delta Chat](https://delta.chat)
