@@ -1,0 +1,35 @@
+{
+  "name": "the-first-dungeon-webxdc",
+  "version": "1.1.0",
+  "description": "Un RPG de acción 2D con mundo de píxeles lleno de aventuras, optimizado para ejecutarse como aplicación Webxdc en Delta Chat.",
+  "type": "module",
+  "main": "webxdc.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src-unminified --ext .js",
+    "lint:fix": "eslint src-unminified --ext .js --fix",
+    "format": "prettier --write \"src-unminified/**/*.js\"",
+    "format:check": "prettier --check \"src-unminified/**/*.js\"",
+    "build:xdc": "npm run build && make xdc",
+    "clean": "rm -rf dist src/*.js src/*.map src/chunks"
+  },
+  "keywords": [
+    "webxdc",
+    "rpg",
+    "game",
+    "delta-chat",
+    "pixijs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "eslint": "^10.2.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.2",
+    "vite": "^8.0.8"
+  }
+}
