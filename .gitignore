@@ -1,13 +1,4 @@
 ```
-# Compiled and build artifacts
+# Map files
 *.map
-# Dependencies
-node_modules/
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-# Editors
-.vscode/
-.idea/
 ```
