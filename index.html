@@ -68,7 +68,7 @@
     <!-- Main Menu -->
     <div id="main-menu">
       <h1 style="color: white; font-size: 48px; text-shadow: 0 0 20px rgba(74, 144, 217, 0.8); margin-bottom: 40px;">🎮 The First Dungeon</h1>
-      <button class="menu-btn" onclick="gameInstance.StartGame()">Start Game</button>
+      <button class="menu-btn" id="start-btn">Start Game</button>
       <button class="menu-btn" onclick="alert('Continue feature coming soon!')">Continue</button>
       <button class="menu-btn" onclick="alert('Options feature coming soon!')">Options</button>
     </div>
@@ -82,9 +82,11 @@
     <!-- Game UI (hidden by default) -->
     <div id="game-ui" style="display: none;"></div>
 
-    <!-- Performance optimization: Remove loader when game is ready -->
+    <!-- Game initialization script -->
     <script>
-      window.addEventListener('load', function() {
+      // Wait for all scripts to load before attaching event listeners
+      window.addEventListener('DOMContentLoaded', function() {
+        // Remove initial loader
         const loaderBar = document.getElementById('loader-bar');
         const loaderText = document.getElementById('loader-text');
         if (loaderBar) loaderBar.style.width = '100%';
@@ -96,6 +98,19 @@
             if (loader) loader.remove();
           }, 300);
         }, 500);
+
+        // Attach Start Game button listener after gameInstance is available
+        const startBtn = document.getElementById('start-btn');
+        if (startBtn) {
+          startBtn.addEventListener('click', function() {
+            if (typeof window.gameInstance !== 'undefined' && window.gameInstance) {
+              window.gameInstance.StartGame();
+            } else {
+              console.error('[ERROR] gameInstance not initialized yet');
+              alert('Game is still loading. Please wait a moment and try again.');
+            }
+          });
+        }
       });
     </script>
   </body>
