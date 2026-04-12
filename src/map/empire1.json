@@ -1,0 +1,129 @@
+{
+  "name": "Empire1",
+  "texture": "grass2",
+  "base_position": {
+    "x": 252,
+    "y": 252
+  },
+
+  "size": { 
+    "width": 5000, 
+    "height": 1500 
+  },
+
+  "objects": [
+    {
+      "texture": "corner1",
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "texture": "bush3",
+      "x": 365,
+      "y": 152,
+      "scale": 1
+    },
+    {
+      "texture": "flower1",
+      "x": 765,
+      "y": 172,
+      "scale": 0.3
+    },
+    {
+      "texture": "tree2",
+      "x": 2348,
+      "y": 314,
+      "scale": 1.1
+    },
+    {
+      "texture": "hill1",
+      "x": 765,
+      "y": 152,
+      "z": 1
+    },
+    {
+      "texture": "hill1",
+      "x": 2000,
+      "y": -300,
+      "z": 1
+    },
+    {
+      "texture": "chest",
+      "x": 2346,
+      "y": 48,
+      "scale": 0.5
+    },
+    {
+      "texture": "bush2",
+      "x": 465,
+      "y": 652,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree2",
+      "x": 385,
+      "y": 252,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree1",
+      "x": 1000,
+      "y": 100,
+      "scale": 1.1
+    },
+    {
+      "texture": "tree3",
+      "x": 75,
+      "y": 582,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree7",
+      "x": 300,
+      "y": 1000,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree7",
+      "x": 2738,
+      "y": 926,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree5",
+      "x": 900,
+      "y": 454,
+      "scale": 1.2
+    },
+    {
+      "texture": "dirt1",
+      "x": 1014,
+      "y": 1118,
+      "z": 1,
+      "scale": 1.1
+    },
+    {
+      "texture": "tree6",
+      "x": 1044,
+      "y": 1118,
+      "scale": 1.1
+    }
+  ],
+
+  "entities": [
+    { "id": "mushroom", "x": 1500, "y": 500 },
+    { "id": "goblin", "x": 1500, "y": 500 },
+    { "id": "goblin", "x": 1500, "y": 630 },
+    { "id": "goblin", "x": 2000, "y": 630 },
+    { "id": "goblin", "x": 1000, "y": 230 },
+    { "id": "goblin", "x": 800, "y": 230 },
+    { "id": "demon", "x": 2200, "y": 600 },
+    { "id": "demon", "x": 2400, "y": 150 },
+    { "id": "goblin", "x": 350, "y": 300 },
+    { "id": "mushroom", "x": 1650, "y": 620 },
+    { "id": "mushroom", "x": 1786, "y": 234 },
+    { "id": "mushroom", "x": 744, "y": 1120 }
+  ]
+
+}

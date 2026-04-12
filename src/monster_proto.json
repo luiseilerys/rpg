@@ -1,0 +1,119 @@
+{
+  "demon" : {
+    "name": "Demon",
+    "level": 10,
+    "sprite_sheet": "demon",
+    "scale": 0.6,
+
+    "attributes": {
+      "maxHp": 500,
+      "speed": 0.3,
+      "damage": 30,
+      "range": 200
+    },
+
+    "animations": {
+      "IDLE": {
+        "animation": "ready",
+        "speed": 0.15
+      },
+      "HURT": {
+        "animation": "hit",
+        "speed": 0.13
+      },
+      "DIE": {
+        "animation": "dead",
+        "speed": 0.05
+      },
+      "MOVE": {
+        "animation": "walk",
+        "speed": 0.13
+      },
+      "ATTACK": {
+        "animation": "attack1",
+        "speed": 0.2
+      },
+      "ATTACK2": {
+        "damage": 20,
+        "animation": "attack2",
+        "speed": 0.2
+      }
+    }
+  },
+
+
+  "goblin" : {
+    "name": "Goblin",
+    "level": 3,
+    "sprite_sheet": "goblin",
+    "scale": 0.25,
+
+    "attributes": {
+      "maxHp": 60,
+      "speed": 2,
+      "damage": 2,
+      "range": 80
+    },
+
+    "animations": {
+      "IDLE": {
+        "animation": "Idle",
+        "speed": 0.12
+      },
+      "HURT": {
+        "animation": "Take-Hit",
+        "speed": 0.10
+      },
+      "DIE": {
+        "animation": "Death",
+        "speed": 0.05
+      },
+      "MOVE": {
+        "animation": "Run",
+        "speed": 0.35
+      },
+      "ATTACK": {
+        "animation": "Attack",
+        "speed": 0.35
+      }
+    }
+  },
+
+
+  "mushroom" : {
+    "name": "Mushroom",
+    "level": 5,
+    "sprite_sheet": "mushroom",
+    "scale": 0.35,
+
+    "attributes": {
+      "maxHp": 160,
+      "speed": 1,
+      "damage": 3,
+      "range": 100
+    },
+
+    "animations": {
+      "IDLE": {
+        "animation": "Idle",
+        "speed": 0.12
+      },
+      "HURT": {
+        "animation": "Take-Hit",
+        "speed": 0.10
+      },
+      "DIE": {
+        "animation": "Death",
+        "speed": 0.04
+      },
+      "MOVE": {
+        "animation": "Run",
+        "speed": 0.25
+      },
+      "ATTACK": {
+        "animation": "Attack",
+        "speed": 0.2
+      }
+    }
+  }
+}
