@@ -4,6 +4,7 @@
  */
 
 import { CONFIG } from './core/constants.js';
+import { log, error } from './utils/helpers.js';
 
 export class Map extends PIXI.Container {
     constructor () {

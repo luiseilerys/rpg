@@ -1,27 +1,13 @@
 ```
-# Build artifacts
-*.min.js
-dist/
-build/
-target/
-
+# Compiled and build artifacts
+*.map
 # Dependencies
 node_modules/
-
 # Logs and temp files
 *.log
 *.tmp
-
-# Environment
-.env
-.env.local
-*.env.*
-
+*.swp
 # Editors
 .vscode/
 .idea/
-
-# Maps and textures cache
-src/map/textures/*.map
-src/main.js.map
 ```
