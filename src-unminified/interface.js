@@ -3,6 +3,8 @@
  * Handles all user interface elements and updates
  */
 
+import { log, error } from './utils/helpers.js';
+
 export class Interface {
     constructor () {
         this.playerStats = null;

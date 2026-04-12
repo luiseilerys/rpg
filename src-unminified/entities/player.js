@@ -5,6 +5,7 @@
 
 import { CONFIG, DIRECTIONS, ENTITY_TYPES } from '../core/constants.js';
 import { Entity } from './entity.js';
+import { log, error, getLocalStorage, setLocalStorage } from '../utils/helpers.js';
 
 export class Player extends Entity {
     constructor (id, x, y, map) {

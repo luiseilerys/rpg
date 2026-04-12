@@ -6,6 +6,7 @@
 import { CONFIG, DEVELOPMENT } from './core/constants.js';
 import { Game } from './game.js';
 import { Interface } from './interface.js';
+import { log, error, show, hide, getLocalStorage, setLocalStorage } from './utils/helpers.js';
 
 // Global instances
 let gameInstance = null;

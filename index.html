@@ -65,6 +65,23 @@
     <!-- User interface injected here -->
     <main></main>
 
+    <!-- Main Menu -->
+    <div id="main-menu">
+      <h1 style="color: white; font-size: 48px; text-shadow: 0 0 20px rgba(74, 144, 217, 0.8); margin-bottom: 40px;">🎮 The First Dungeon</h1>
+      <button class="menu-btn" onclick="gameInstance.StartGame()">Start Game</button>
+      <button class="menu-btn" onclick="alert('Continue feature coming soon!')">Continue</button>
+      <button class="menu-btn" onclick="alert('Options feature coming soon!')">Options</button>
+    </div>
+
+    <!-- Loading Window -->
+    <div id="loading-window" style="display: none;">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div id="loading-text">Loading...</div>
+    </div>
+
+    <!-- Game UI (hidden by default) -->
+    <div id="game-ui" style="display: none;"></div>
+
     <!-- Performance optimization: Remove loader when game is ready -->
     <script>
       window.addEventListener('load', function() {
