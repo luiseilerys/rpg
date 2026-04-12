@@ -3,7 +3,7 @@
  * Abstract base class for all game entities
  */
 
-import { ENTITY_TYPES } from './core/constants.js';
+import { ENTITY_TYPES } from '../core/constants.js';
 
 export class Entity extends PIXI.Container {
     constructor (id, x, y, type) {

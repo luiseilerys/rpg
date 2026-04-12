@@ -1,62 +1,27 @@
 ```
+# Build artifacts
+*.min.js
+dist/
+build/
+target/
+
 # Dependencies
 node_modules/
 
-# Build artifacts
-dist/
-build/
-*.min.js
-*.min.css
+# Logs and temp files
+*.log
+*.tmp
 
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
 
 # Editors
 .vscode/
 .idea/
 
-# Logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Package lock
-package-lock.json
-yarn.lock
-
-# Source maps
-*.map
-
-# Temporary files
-*.tmp
-*.temp
-
-# Compression artifacts
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-
+# Maps and textures cache
+src/map/textures/*.map
+src/main.js.map
 ```

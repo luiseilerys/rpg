@@ -3,8 +3,8 @@
  * Player character with movement, combat, and progression systems
  */
 
-import { CONFIG, DIRECTIONS, ENTITY_TYPES } from './core/constants.js';
-import { Entity } from './entities/entity.js';
+import { CONFIG, DIRECTIONS, ENTITY_TYPES } from '../core/constants.js';
+import { Entity } from './entity.js';
 
 export class Player extends Entity {
     constructor (id, x, y, map) {
