@@ -22,6 +22,10 @@ $(document).ready(() => {
 
     // Initialize game
     gameInstance = new Game();
+    
+    // Expose to global scope for HTML onclick handlers
+    window.gameInstance = gameInstance;
+    window.gameInterface = gameInterface;
 
     // Setup keyboard listeners
     document.addEventListener('keypress', e => gameInstance.OnKeyDown(e));
