@@ -3,7 +3,7 @@
  * Handles map loading, rendering, and collision detection
  */
 
-import { CONFIG, ASSETS_PATH } from './core/constants.js';
+import { CONFIG } from './core/constants.js';
 import { log, error } from './utils/helpers.js';
 
 export class Map extends PIXI.Container {
@@ -43,7 +43,7 @@ export class Map extends PIXI.Container {
         log(`[MAP] Loading map: ${mapName}`);
 
         // Load map JSON data
-        fetch(`${ASSETS_PATH}maps/${mapName}.json`, {
+        fetch(`${'assets/'}maps/${mapName}.json`, {
             cache: 'force-cache'
         })
             .then(response => response.json())
