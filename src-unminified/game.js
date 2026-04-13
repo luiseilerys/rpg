@@ -61,6 +61,12 @@ export class Game {
         show('#loading-window');
         this.currentState = GAME_STATES.LOADING;
 
+        // Initialize interface now that we're starting the game
+        if (!gameInterface) {
+            gameInterface = new Interface();
+            window.gameInterface = gameInterface;
+        }
+
         this.__initGame();
     }
 
