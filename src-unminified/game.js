@@ -3,7 +3,7 @@
  * Main game loop, initialization, and state management
  */
 
-import { CONFIG, ASSETS, DEVELOPMENT, GAME_STATES, ASSETS_PATH } from './core/constants.js';
+import { CONFIG, ASSETS, DEVELOPMENT, GAME_STATES } from './core/constants.js';
 import { CollisionSystem } from './systems/CollisionSystem.js';
 import { EffectSystem } from './systems/EffectSystem.js';
 import { Player } from './entities/player.js';
@@ -119,7 +119,7 @@ export class Game {
 
         // Optimize caching for production
         loader.defaultQueryString = DEVELOPMENT ? `v=${Date.now()}` : `v=${CONFIG.version}`;
-        loader.baseUrl = ASSETS_PATH;
+        loader.baseUrl = 'assets/';
 
         // Progress tracking
         loader.onProgress.add((loader, resource) => {
@@ -166,7 +166,7 @@ export class Game {
     __loadProto (name, callback) {
         window.gameInterface.SetLoadingText(`Load ${name} table...`);
 
-        fetch(`${ASSETS_PATH}${name}.json`, {
+        fetch(`${'assets/'}${name}.json`, {
             cache: DEVELOPMENT ? 'no-store' : 'force-cache'
         })
             .then(response => response.json())
