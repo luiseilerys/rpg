@@ -96,7 +96,7 @@ export class Game {
         });
 
         log('[INFO] Game init DONE!');
-        gameInterface.SetLoadingText('Game initialization...');
+        window.gameInterface.SetLoadingText('Game initialization...');
 
         // Initialize systems
         this.collisionSystem = new CollisionSystem(CONFIG.worldWidth, CONFIG.worldHeight);
@@ -113,7 +113,7 @@ export class Game {
      * Load all game assets with caching optimization
      */
     __loadAssets () {
-        gameInterface.SetLoadingText('Load assets...');
+        window.gameInterface.SetLoadingText('Load assets...');
 
         const loader = PIXI.Loader.shared;
 
@@ -124,7 +124,7 @@ export class Game {
         // Progress tracking
         loader.onProgress.add((loader, resource) => {
             const progress = Math.round(loader.progress);
-            gameInterface.SetLoadingText(`Loading: ${progress}%`);
+            window.gameInterface.SetLoadingText(`Loading: ${progress}%`);
             log(`[ASSET] ${resource.name}: ${progress}%`);
         });
 
@@ -164,7 +164,7 @@ export class Game {
      * Load a single proto table with caching control
      */
     __loadProto (name, callback) {
-        gameInterface.SetLoadingText(`Load ${name} table...`);
+        window.gameInterface.SetLoadingText(`Load ${name} table...`);
 
         fetch(`${ASSETS_PATH}${name}.json`, {
             cache: DEVELOPMENT ? 'no-store' : 'force-cache'
@@ -184,7 +184,7 @@ export class Game {
      * Load map data
      */
     __loadMap () {
-        gameInterface.SetLoadingText('Load map data...');
+        window.gameInterface.SetLoadingText('Load map data...');
 
         this.map = new Map();
         this.map.Load('empire1', () => {
@@ -199,7 +199,7 @@ export class Game {
      * Load/create player character
      */
     __loadCharacter () {
-        gameInterface.SetLoadingText('Load character...');
+        window.gameInterface.SetLoadingText('Load character...');
 
         // Calculate spawn position
         let spawnX = this.map.basePosition.x;
@@ -247,7 +247,7 @@ export class Game {
         log('[INFO] Game ready!');
 
         // Show welcome message
-        gameInterface.ShowMessage(`Welcome to ${CONFIG.title}!`);
+        window.gameInterface.ShowMessage(`Welcome to ${CONFIG.title}!`);
     }
 
     /**
