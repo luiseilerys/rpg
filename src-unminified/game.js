@@ -28,8 +28,10 @@ export class Game {
 
     constructor () {
         window.onresize = () => {
-            this.width = this.app.width = window.innerWidth;
-            this.height = this.app.height = window.innerHeight;
+            if (this.app) {
+                this.width = this.app.width = window.innerWidth;
+                this.height = this.app.height = window.innerHeight;
+            }
         };
     }
 
@@ -62,9 +64,8 @@ export class Game {
         this.currentState = GAME_STATES.LOADING;
 
         // Initialize interface now that we're starting the game
-        if (!gameInterface) {
-            gameInterface = new Interface();
-            window.gameInterface = gameInterface;
+        if (!window.gameInterface) {
+            window.gameInterface = new Interface();
         }
 
         this.__initGame();
