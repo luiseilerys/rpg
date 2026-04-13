@@ -1,4 +1,4 @@
 ```
-# Map files
-*.js.map
+# Source maps
+*.map
 ```

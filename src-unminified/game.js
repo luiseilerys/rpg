@@ -8,6 +8,7 @@ import { CollisionSystem } from './systems/CollisionSystem.js';
 import { EffectSystem } from './systems/EffectSystem.js';
 import { Player } from './entities/player.js';
 import { Map } from './map.js';
+import { Interface } from './interface.js';
 import { log, error, show, hide, getLocalStorage, setLocalStorage } from './utils/helpers.js';
 
 const LOADER = PIXI.Loader.shared;
