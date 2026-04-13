@@ -3,7 +3,7 @@
  * Handles map loading, rendering, and collision detection
  */
 
-import { CONFIG } from './core/constants.js';
+import { CONFIG, ASSETS_PATH } from './core/constants.js';
 import { log, error } from './utils/helpers.js';
 
 export class Map extends PIXI.Container {

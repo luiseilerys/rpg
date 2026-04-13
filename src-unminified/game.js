@@ -3,7 +3,7 @@
  * Main game loop, initialization, and state management
  */
 
-import { CONFIG, ASSETS, DEVELOPMENT, GAME_STATES } from './core/constants.js';
+import { CONFIG, ASSETS, DEVELOPMENT, GAME_STATES, ASSETS_PATH } from './core/constants.js';
 import { CollisionSystem } from './systems/CollisionSystem.js';
 import { EffectSystem } from './systems/EffectSystem.js';
 import { Player } from './entities/player.js';
