@@ -17,15 +17,11 @@ $(document).ready(() => {
     // Set document title
     $('title').text(CONFIG.title);
 
-    // Initialize interface
-    gameInterface = new Interface();
-
-    // Initialize game
+    // Initialize game first (without interface)
     gameInstance = new Game();
     
     // Expose to global scope for HTML onclick handlers
     window.gameInstance = gameInstance;
-    window.gameInterface = gameInterface;
 
     // Setup keyboard listeners
     document.addEventListener('keypress', e => gameInstance.OnKeyDown(e));

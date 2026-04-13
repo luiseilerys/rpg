@@ -11,15 +11,25 @@ export class Interface {
         this.messageQueue = [];
         this.currentMessage = null;
         this.messageTimer = 0;
+        this.uiInitialized = false;
 
-        // Initialize UI elements
-        this.InitializeUI();
+        // Don't initialize UI in constructor - wait for DOM to be ready
+        // InitializeUI will be called when Show() is first called
     }
 
     /**
      * Initialize UI elements
      */
     InitializeUI () {
+        // Prevent double initialization
+        if (this.uiInitialized) {return;}
+        
+        // Check if document.body is available
+        if (!document.body) {
+            error('[UI] Cannot initialize - document.body is null');
+            return;
+        }
+
         // Create player stats container if not exists
         if (!document.getElementById('player-stats')) {
             this.CreatePlayerStatsUI();
@@ -30,6 +40,7 @@ export class Interface {
             this.CreateMessageUI();
         }
 
+        this.uiInitialized = true;
         log('[UI] Interface initialized');
     }
 
